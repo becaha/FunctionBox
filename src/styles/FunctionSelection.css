@@ -1,0 +1,13 @@
+.funcDisplay {
+    background-color: white;
+    border-color: black;
+    color: black;
+    cursor: default;
+}
+
+.funcDisplay:hover {
+    background-color: white;
+    color: black;
+    border-color: black;
+    cursor: default;
+}

@@ -1,28 +1,22 @@
 import React from 'react';
 import { Button, FormControl } from 'react-bootstrap';
-
+import FunctionSelection from './FunctionSelection';
 
 class SetupGame extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {answer: null};
+        this.state = {func: null};
         this.submitFunction = this.props.submitFunction.bind(this);
+        this.generateFunction = this.props.generateFunction.bind(this);
     }
 
     render () {
         return (
             <div>
                 Create your function!
-                    <FormControl
-                        type="text"
-                        value={this.state.guess}
-                        placeholder="Enter text"
-                        onChange={(e) => this.setState({ answer: e.target.value })}
-                      />
-                    <Button onClick={() => this.submitFunction(this.state.answer)}>
-                        Submit Function
-                    </Button>
-                    <Button>
+                    <FunctionSelection functions={this.props.functions} level={this.props.level}
+                        submitFunction={this.submitFunction}/>
+                    <Button onClick={() => this.generateFunction()}>
                         Generate Random Function
                     </Button>
             </div>

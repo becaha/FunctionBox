@@ -1,17 +1,20 @@
 import React from 'react';
 import { Button, FormControl } from 'react-bootstrap';
 import SetupGame from './SetupGame';
+import FunctionSelection from './FunctionSelection';
 
 
 class PlayGame extends React.Component {
     constructor(props) {
         super(props);
         this.state = {guess: null,
-                        answer: null,
+                        func: null,
                         play: false,
                         input: null,
                         output: null,
-                        score: 0};
+                        score: 0,
+                        level: 0};
+        this.functions = ["+","-","*","/"];
         this.generateFunction = this.generateFunction.bind(this);
         this.isCorrect = this.isCorrect.bind(this);
         this.makeGuess = this.makeGuess.bind(this);
@@ -21,12 +24,20 @@ class PlayGame extends React.Component {
         this.submitFunction = this.submitFunction.bind(this);
     }
 
-    componentDidMount() {
-        this.generateFunction();
-    }
-
     generateFunction() {
-        this.setState({answer: "x + 1 * 3"});
+        let generatedFunction = "";
+        for (let i = 0; i < this.state.level + 1; i++) {
+            let rand = Math.floor(Math.random() * (this.functions.length - 1));
+            let randFunc = this.functions[rand];
+            let min = 0;
+            if (randFunc === "/") {
+                min = 1;
+            }
+            let randNum = Math.floor(Math.random() * ((this.state.level + 1) * 10 - 1 - min)) + min;
+            generatedFunction += randFunc + randNum;
+        }
+        console.log(generatedFunction);
+        this.setState({func: generatedFunction, play: true});
     }
 
     computeFunction(char, func, oldComputed) {
@@ -50,13 +61,12 @@ class PlayGame extends React.Component {
         return computed;
     }
 
-    // TODO
     doFunction(input) {
         let func = null;
         let computed = parseInt(this.state.input);
-        console.log("do", this.state.answer);
-        for (let index in this.state.answer) {
-            let char = this.state.answer[index];
+        console.log("do", this.state.func);
+        for (let index in this.state.func) {
+            let char = this.state.func[index];
             console.log(char);
             if (char == " ") {
                 continue;
@@ -77,8 +87,8 @@ class PlayGame extends React.Component {
     }
 
     isCorrect() {
-        console.log(this.state.guess, this.state.answer);
-        return this.state.guess === this.state.answer;
+        console.log(this.state.guess, this.state.func);
+        return this.state.guess === this.state.func;
     }
 
     makeGuess() {
@@ -92,11 +102,11 @@ class PlayGame extends React.Component {
     }
 
     submitFunction(func) {
-        this.setState({answer: func, play: true});
+        this.setState({func: func, play: true});
     }
 
     render() {
-        console.log("render",this.state.answer);
+        console.log("render",this.state.func);
         let screen = (
             <div>
                 <div>
@@ -132,7 +142,8 @@ class PlayGame extends React.Component {
         );
         if (!this.state.play) {
             screen = (
-                <SetupGame submitFunction={this.submitFunction}/>
+                <SetupGame functions={this.functions} level={this.state.level}
+                    submitFunction={this.submitFunction} generateFunction={this.generateFunction}/>
             );
         }
 
