@@ -6,7 +6,6 @@ class SetupGame extends React.Component {
     constructor(props) {
         super(props);
         this.state = {func: null};
-        console.log(this.props);
         this.submitFunction = this.props.submitFunction.bind(this);
         this.generateFunction = this.props.generateFunction.bind(this);
     }

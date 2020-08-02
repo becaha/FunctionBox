@@ -33,6 +33,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ed7fbe1-1dc7-4385-9199-c96ff33dd19a" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/src/components/Screen.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/styles/PlayGame.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/styles/Screen.css" afterDir="false" />
@@ -40,10 +41,13 @@
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/FunctionSelection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FunctionSelection.js" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/src/service/Functions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> b01a793f6ce8f53f83e662c8b80d666ed018140c
       <change beforePath="$PROJECT_DIR$/src/components/PlayGame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PlayGame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SetupGame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SetupGame.js" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,18 +85,6 @@
       <recent name="C:\Users\cheri\Desktop\Function Box\functionbox\src\components" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -118,6 +110,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
