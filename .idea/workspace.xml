@@ -33,12 +33,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ed7fbe1-1dc7-4385-9199-c96ff33dd19a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/FunctionSelection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/FunctionSelection.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Screen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/PlayGame.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/Screen.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FunctionSelection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FunctionSelection.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PlayGame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PlayGame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SetupGame.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SetupGame.js" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

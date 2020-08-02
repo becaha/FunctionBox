@@ -1,0 +1,9 @@
+.wrong {
+    background-color: #dc143c;
+    border: #dc143c solid 1px;
+}
+
+.wrong:hover {
+    background-color: #dc143c;
+    border: #dc143c solid 1px;
+}

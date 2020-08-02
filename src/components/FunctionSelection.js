@@ -10,7 +10,6 @@ class FunctionSelection extends React.Component {
             func: ""
         };
         this.updateFunction = this.updateFunction.bind(this);
-        this.submitFunction = this.props.submitFunction.bind(this);
     }
 
     updateFunction(expressionToken, funcPicked) {
@@ -48,7 +47,7 @@ class FunctionSelection extends React.Component {
                     </Button>
                 </div>
                 <Button disabled={!this.state.funcPick || (this.state.func.length < 1)}
-                    onClick={() => this.submitFunction(this.state.func)}>
+                    onClick={() => this.props.submitFunction(this.state.func)}>
                     Submit Function
                 </Button>
             </div>

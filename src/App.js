@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import PlayGame from './components/PlayGame';
+import Screen from './components/Screen';
 import { Button } from 'react-bootstrap';
 
 class App extends React.Component {
@@ -12,19 +12,19 @@ class App extends React.Component {
 
     render() {
         let screen = (
-            <header className="App-header">
+            <div className="screen">
                 <p>
                   Function Box
                 </p>
                 <Button onClick={() => this.setState({play: true})}>Play</Button>
-              </header>
+            </div>
         );
 
-        this.state.play ? screen = <PlayGame/> : screen = screen;
+        this.state.play ? screen = <Screen/> : screen = screen;
 
         return (
-            <div className="App">
-              {screen}
+            <div>
+                {screen}
             </div>
         );
     }

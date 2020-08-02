@@ -6,6 +6,7 @@ class SetupGame extends React.Component {
     constructor(props) {
         super(props);
         this.state = {func: null};
+        console.log(this.props);
         this.submitFunction = this.props.submitFunction.bind(this);
         this.generateFunction = this.props.generateFunction.bind(this);
     }
@@ -15,7 +16,7 @@ class SetupGame extends React.Component {
             <div>
                 Create your function!
                     <FunctionSelection functions={this.props.functions} level={this.props.level}
-                        submitFunction={this.submitFunction}/>
+                        submitFunction={this.props.submitFunction}/>
                     <Button onClick={() => this.generateFunction()}>
                         Generate Random Function
                     </Button>
